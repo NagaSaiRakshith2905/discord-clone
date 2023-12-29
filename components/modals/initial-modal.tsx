@@ -63,8 +63,9 @@ export const InitialModal = () => {
       form.reset();
       router.refresh();
       window.location.reload();
-    } catch (error) {}
-    console.log(values);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   if (!isMounted) {

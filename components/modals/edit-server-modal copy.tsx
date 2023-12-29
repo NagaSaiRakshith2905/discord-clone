@@ -70,8 +70,9 @@ export const EditServerModal = () => {
       form.reset();
       router.refresh();
       onClose();
-    } catch (error) {}
-    console.log(values);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleClose = () => {

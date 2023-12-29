@@ -28,6 +28,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import FileUpload from "@/components/file-upload";
 import { useModal } from "@/hooks/use-modal-store";
+import { error } from "console";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -60,8 +61,9 @@ export const CreateServerModal = () => {
       form.reset();
       router.refresh();
       onClose();
-    } catch (error) {}
-    console.log(values);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleClose = () => {
