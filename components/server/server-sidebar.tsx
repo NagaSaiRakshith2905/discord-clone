@@ -6,6 +6,7 @@ import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
 
 import { ServerHeader } from "./server-header";
+import { ScrollArea } from "../ui/scroll-area";
 
 export const ServerSidebar = async ({ serverId }: { serverId: string }) => {
   const profile = await currentProfile();
@@ -60,6 +61,7 @@ export const ServerSidebar = async ({ serverId }: { serverId: string }) => {
         server={server}
         role={role}
       />
+      <ScrollArea />
     </div>
   );
 };
